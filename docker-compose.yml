@@ -1,0 +1,17 @@
+## Fichier : docker-compose.yml
+version: '3'
+services:
+  material:
+    container_name: material
+    build: .
+    ports:
+      - "3000:3000"
+    # stdin_open: true
+    volumes:
+       - .:/usr/src/app/monday_may
+       - /usr/src/app/monday_may/node_modules
+    tty: true
+  # nginx:
+  #   build : ./nginx
+  #   ports: 80:80
+         
